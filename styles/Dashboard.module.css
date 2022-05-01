@@ -1,0 +1,30 @@
+.dashboardContainer {
+  font-family: "Archivo";
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.aside {
+  background: #292929;
+  width: 20vw;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+
+.logout {
+  display: flex;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}

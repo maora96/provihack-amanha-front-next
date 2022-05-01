@@ -1,0 +1,52 @@
+.linkContainer {
+  font-family: "Archivo";
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  padding-left: 2rem;
+  border-left: 0.8rem solid #292929;
+  cursor: pointer;
+  margin-bottom: 4rem;
+}
+
+.linkContainer svg {
+  margin-right: 1rem;
+  color: white;
+}
+
+.linkContainer .title {
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  color: white;
+}
+
+.linkContainerActive {
+  font-family: "Archivo";
+  display: flex;
+  align-items: center;
+  border-left: 0.8rem solid #00b868;
+  height: 4rem;
+  padding-left: 2rem;
+  cursor: pointer;
+  margin-bottom: 4rem;
+}
+
+.linkContainerActive svg {
+  margin-right: 1rem;
+  color: #00b868;
+}
+
+.linkContainerActive .title {
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  color: #00b868;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  color: white;
+}
