@@ -88,5 +88,35 @@
 .image {
   width: 70vw;
   height: 100vh;
-  background-color: #00a35c;
+  background: url("/assets/images/loginbg.svg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.image h2 {
+  font-weight: bold;
+  font-size: 4rem;
+  color: white;
+  width: 65%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.image p {
+  font-size: 2.4rem;
+  color: white;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.imageContainer {
+  text-align: center;
+  width: 60%;
+  padding-bottom: 5rem;
 }

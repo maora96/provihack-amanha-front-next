@@ -122,7 +122,15 @@ export default function Signup() {
           </form>
         </div>
       </aside>
-      <div className={styles.image}></div>
+      <div className={styles.image}>
+        <div className={styles.imageContainer}>
+          <h2>Você está a poucos passos de garantir uma jornada sustentável</h2>
+          <p>
+            Sustentabilidade ambiental e sustentável para sua empresa e
+            colaboradores
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

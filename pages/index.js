@@ -37,7 +37,6 @@ export default function Home() {
 
           <h1 className={styles.title}>Login</h1>
           <p className={styles.subtitle}>Sustentável em todos sentidos!</p>
-          {/* 1231231231 */}
           <form
             onSubmit={handleSubmit((data) => {
               setData(JSON.stringify(data));
@@ -97,7 +96,15 @@ export default function Home() {
           </form>
         </div>
       </aside>
-      <div className={styles.image}></div>
+      <div className={styles.image}>
+        <div className={styles.imageContainer}>
+          <h2>Reverta sustentabilidade em benefícios</h2>
+          <p>
+            Garanta redução do uso de recursos e ganhe crédito em benefícios
+            para seus colaboradores
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
