@@ -13,13 +13,13 @@ export default function Dashboard() {
       <div className={styles.dashboardContainer}>
         <aside>
           <div className={styles.sidebarContainer}>
-            <img src="" className={styles.logo} />
+            {/* <img src="" className={styles.logo} /> */}
 
             <div className={styles.sidebarLinks}>
               <div>Dashboard</div>
               <div>Recursos</div>
               <div>Benefícios</div>
-              <div>>Crédito verde</div>
+              <div>Crédito verde</div>
             </div>
           </div>
           <div className={styles.logout}>Sair</div>
