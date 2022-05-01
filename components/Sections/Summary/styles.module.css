@@ -1,0 +1,28 @@
+.summaryContainer {
+  font-family: "Archivo";
+  width: 80vw;
+  padding: 5.5rem 3rem;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.4rem;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 3.5rem;
+
+  color: #a3a3a3;
+}
+
+.goals {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs {
+}

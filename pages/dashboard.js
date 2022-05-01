@@ -20,10 +20,6 @@ import LinkContainer from "../components/LinkContainer";
 
 export default function Dashboard() {
   const [activeSection, setActiveSection] = useState("summary");
-  const [isDashboardActive, setIsDashboardActive] = useState(false);
-  const [isResourcesActive, setIsResourcesActive] = useState(false);
-  const [isBenefitsActive, setIsBenefitsActive] = useState(false);
-  const [isCreditActive, setIsCreditActive] = useState(false);
 
   return (
     <div className={styles.dashboardContainer}>
