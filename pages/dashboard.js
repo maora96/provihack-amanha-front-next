@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useContext, useState } from "react";
+import { useCookies } from "react-cookie";
+import { UserContext } from "../contexts/UserContext";
 import Router from "next/router";
 import Image from "next/image";
 
@@ -19,8 +21,16 @@ import styles from "../styles/Dashboard.module.css";
 import LinkContainer from "../components/LinkContainer";
 
 export default function Dashboard() {
+  const [cookies, setCookies, removeCookies] = useCookies();
   const [activeSection, setActiveSection] = useState("summary");
+  const { user, setUser, registeredUsers, setRegisteredUsers } =
+    useContext(UserContext);
 
+  useEffect(() => {
+    if (!cookies?.user) {
+      Router.push("/");
+    }
+  }, []);
   return (
     <div className={styles.dashboardContainer}>
       <aside className={styles.aside}>
@@ -69,6 +79,8 @@ export default function Dashboard() {
           <MdLogout
             size={32}
             onClick={() => {
+              removeCookies(`user`);
+              setUser({});
               Router.push("/");
             }}
           />
