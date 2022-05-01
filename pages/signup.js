@@ -1,10 +1,11 @@
+import React from "react";
 import Router from "next/router";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Signup.module.css";
 
-export default function Home() {
+export default function Signup() {
   return (
-    <div className={styles.loginContainer}>
+    <div className={styles.signupContainer}>
       <aside className={styles.aside}>
         <div>
           <Image
@@ -13,8 +14,7 @@ export default function Home() {
             height={48}
             alt="logo"
           />
-
-          <h1 className={styles.title}>Login</h1>
+          <h1 className={styles.title}>Cadastro</h1>
           <p className={styles.subtitle}>Sustentável em todos sentidos!</p>
 
           <form
@@ -25,8 +25,19 @@ export default function Home() {
           >
             <div className={styles.formContent}>
               <div className={styles.inputContainer}>
+                <label className={styles.label}>Representante legal</label>
+                <input
+                  type="text"
+                  placeholder="Digite o nome do representante"
+                />
+              </div>
+              <div className={styles.inputContainer}>
+                <label className={styles.label}>CNPJ</label>
+                <input type="email" placeholder="Digite o seu CNPJ" />
+              </div>
+              <div className={styles.inputContainer}>
                 <label className={styles.label}>E-mail</label>
-                <input type="email" placeholder="Digite seu e-mail" />
+                <input type="text" placeholder="Digite seu e-mail" />
               </div>
               <div className={styles.inputContainer}>
                 <label className={styles.label}>Senha</label>
@@ -35,15 +46,7 @@ export default function Home() {
             </div>
 
             <div className={styles.buttons}>
-              <button type="submit">Entrar</button>
-              <button
-                type="button"
-                onClick={() => {
-                  Router.push("/signup");
-                }}
-              >
-                Cadastrar-se
-              </button>
+              <button type="submit">Cadastre-se</button>
             </div>
           </form>
         </div>
