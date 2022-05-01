@@ -2,6 +2,7 @@
   font-family: "Archivo";
   width: 80vw;
   padding: 5.5rem 3rem;
+  margin-left: 20vw;
 }
 
 .title {
@@ -22,6 +23,7 @@
 .goals {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .tabs {

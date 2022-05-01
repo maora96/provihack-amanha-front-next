@@ -1,5 +1,4 @@
 .cardContainer {
-  max-width: 42.6rem;
   min-width: 28.6rem;
   font-family: "Archivo";
   background: #ffffff;
@@ -11,7 +10,6 @@
   -webkit-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.1);
-  flex: 1;
 }
 
 .title {
