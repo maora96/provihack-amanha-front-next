@@ -2,6 +2,8 @@
 
 front-end for the project developed during the provi hack do amanhã hackathon
 
+## you can try the online version of this project [here](https://provihack-amanha-front-next.vercel.app).
+
 ## technologies
 
 - nextjs
