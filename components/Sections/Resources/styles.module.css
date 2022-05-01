@@ -33,11 +33,6 @@
   grid-column-gap: 2rem;
 }
 
-/* .goals::after {
-  content: "";
-  flex: auto;
-} */
-
 .button {
   background: #000000;
   border-radius: 0.8rem;
@@ -48,4 +43,9 @@
   line-height: 150%;
   text-align: center;
   color: #ffffff;
+}
+
+.toast {
+  font-size: 1.4rem;
+  font-weight: bold;
 }

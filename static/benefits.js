@@ -21,7 +21,7 @@ export const benefits = [
   },
   {
     icon: `fuel-icon`,
-    name: `Refeição`,
+    name: `Combustível`,
     credits: `1.000`,
   },
   {
