@@ -15,16 +15,16 @@ export default function Resources() {
         <div className={styles.button}>Cadastrar meta</div>
       </div>
       <div className={styles.goals}>
-        {goals.map((goal, id) => (
+        {goals.map((resouce, id) => (
           <ResourceCard
             key={id}
-            icon={goal.icon}
-            goal={goal.goal}
-            name={goal.name}
-            costUnit={goal.costUnit}
-            unit={goal.unit}
-            costMonth={goal.costMonth}
-            costYear={goal.costYear}
+            icon={resouce.icon}
+            goal={resouce.goal}
+            name={resouce.name}
+            costUnit={resouce.costUnit}
+            unit={resouce.unit}
+            costMonth={resouce.costMonth}
+            costYear={resouce.costYear}
           />
         ))}
       </div>

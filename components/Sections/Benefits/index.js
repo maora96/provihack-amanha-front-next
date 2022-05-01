@@ -1,6 +1,5 @@
 import { benefits } from "../../../static/benefits";
 import styles from "./styles.module.css";
-import ResourceCard from "../../ResourceCard";
 import BenefitCard from "../../BenefitCard";
 export default function Benefits() {
   return (
@@ -16,12 +15,12 @@ export default function Benefits() {
         <div className={styles.button}>Distribuir créditos</div>
       </div>
       <div className={styles.goals}>
-        {benefits.map((goal, id) => (
+        {benefits.map((benefit, id) => (
           <BenefitCard
             key={id}
-            icon={goal.icon}
-            name={goal.name}
-            credit={goal.credits}
+            icon={benefit.icon}
+            name={benefit.name}
+            credit={benefit.credits}
           />
         ))}
       </div>
