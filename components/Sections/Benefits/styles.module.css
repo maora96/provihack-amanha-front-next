@@ -1,0 +1,46 @@
+.benefitsContainer {
+  font-family: "Archivo";
+  width: 80vw;
+  padding: 5.5rem 3rem;
+  margin-left: 20vw;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.4rem;
+  margin: 0;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  color: #a3a3a3;
+}
+
+.goals {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+}
+
+.button {
+  background: #000000;
+  border-radius: 0.8rem;
+  color: white;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+}

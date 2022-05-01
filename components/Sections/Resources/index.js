@@ -1,4 +1,3 @@
-import SummaryCard from "../../SummaryCard";
 import { goals } from "../../../static/goals";
 import styles from "./styles.module.css";
 import ResourceCard from "../../ResourceCard";
