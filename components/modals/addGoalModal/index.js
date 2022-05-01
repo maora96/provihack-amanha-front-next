@@ -1,10 +1,12 @@
 import styles from "./styles.module.css";
 import Image from "next/image";
-import { useState } from "react";
+import { useCookies } from "react-cookie";
+import { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-
+import { UserContext } from "../../../contexts/UserContext";
 import "react-toastify/dist/ReactToastify.css";
+import { realNames } from "../../../static/goals";
 
 export default function AddGoalModal({ setShowModal }) {
   const {
@@ -13,6 +15,16 @@ export default function AddGoalModal({ setShowModal }) {
     handleSubmit,
   } = useForm();
   const [data, setData] = useState("");
+  const {
+    user,
+    setUser,
+    registeredUsers,
+    setRegisteredUsers,
+    goals,
+    setGoals,
+  } = useContext(UserContext);
+  const [cookies, setCookies, removeCookies] = useCookies();
+
   return (
     <>
       <div className={styles.overlay}></div>
@@ -20,6 +32,44 @@ export default function AddGoalModal({ setShowModal }) {
         <form
           onSubmit={handleSubmit((data) => {
             setData(JSON.stringify(data));
+            console.log(data);
+
+            const newGoal = {
+              icon: realNames
+                .map((real) => {
+                  if (real.alias === data.name) {
+                    return real.icon;
+                  }
+                })
+                .filter(Boolean)[0],
+              goal: data.goal,
+              alias: data.name,
+              name: realNames
+                .map((real) => {
+                  if (real.alias === data.name) {
+                    return real.name;
+                  }
+                })
+                .filter(Boolean)[0],
+              costUnit: data.costUnit,
+              unit: data.unit,
+              costMonth: Number(data.costUnit) * 730,
+              costYear: Number(data.costUnit) * 730 * 12,
+            };
+
+            console.log(newGoal);
+
+            if (cookies?.goals) {
+              const newArrayOfGoals = [...goals, newGoal];
+              setGoals(newArrayOfGoals);
+              removeCookies(`goals`);
+              setCookies(`goals`, newArrayOfGoals);
+            } else {
+              const newGoals = [];
+              newGoals.push(newGoal);
+              setCookies(`goals`, newGoals);
+              setGoals(newGoals);
+            }
             toast.success(`Meta cadastrada com sucesso!`, {
               icon: ({ theme, type }) => (
                 <Image
@@ -54,7 +104,7 @@ export default function AddGoalModal({ setShowModal }) {
               </h2>
 
               <div className={styles.formContent}>
-                <div className={styles.inputContainer}>
+                {/* <div className={styles.inputContainer}>
                   <label className={styles.label}>Histórico de consumo</label>
                   <select {...register("time", { required: true })}>
                     <option value="">Escolha...</option>
@@ -65,7 +115,7 @@ export default function AddGoalModal({ setShowModal }) {
                     {errors.time &&
                       "Selecione uma modalidade de histórico de consumo."}
                   </span>
-                </div>
+                </div> */}
                 <div className={styles.inputContainer}>
                   <label className={styles.label}>Recurso</label>
                   <select {...register("name", { required: true })}>

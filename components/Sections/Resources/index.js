@@ -1,12 +1,22 @@
-import { useState } from "react";
-import { goals } from "../../../static/goals";
+import { useState, useContext } from "react";
+// import { goals } from "../../../static/goals";
 import styles from "./styles.module.css";
 import ResourceCard from "../../ResourceCard";
 import AddGoalModal from "../../modals/addGoalModal";
 import { ToastContainer } from "react-toastify";
+import { UserContext } from "../../../contexts/UserContext";
 
 export default function Resources() {
   const [showModal, setShowModal] = useState(false);
+  const {
+    user,
+    setUser,
+    registeredUsers,
+    setRegisteredUsers,
+    goals,
+    setGoals,
+  } = useContext(UserContext);
+
   return (
     <>
       <div className={styles.resourcesContainer}>

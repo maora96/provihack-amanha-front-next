@@ -5,7 +5,7 @@ export default function CreditCard({ icon, name, credit, times }) {
   return (
     <div className={styles.cardContainer}>
       <Image
-        src={`/assets/images/${icon}.png`}
+        src={`/assets/images/${icon}.svg`}
         width={64}
         height={64}
         alt="logo"

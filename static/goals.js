@@ -90,3 +90,56 @@ export const goals = [
     costYear: `1.345.800,00`,
   },
 ];
+
+export const realNames = [
+  {
+    alias: `energia`,
+    name: `Energia`,
+    icon: `energy-icon`,
+  },
+  {
+    alias: `agua`,
+    name: `Água`,
+    icon: `water-icon`,
+  },
+  {
+    alias: `gas`,
+    name: `Gás`,
+    icon: `gas-icon`,
+  },
+  {
+    alias: `carvao`,
+    name: `Carvão`,
+    icon: `coal-icon`,
+  },
+  {
+    alias: `petroleo`,
+    name: `Petróleo`,
+    icon: `oil-icon`,
+  },
+  {
+    alias: `papel`,
+    name: `Pápel`,
+    icon: `paper-icon`,
+  },
+  {
+    alias: `metano`,
+    name: `Metano`,
+    icon: `metano-icon`,
+  },
+  {
+    alias: `etanol`,
+    name: `Etanol`,
+    icon: `fuel-icon`,
+  },
+  {
+    alias: `diesel`,
+    name: `Diesel`,
+    icon: `fuel-icon`,
+  },
+  {
+    alias: `gasolina`,
+    name: `Gasolina`,
+    icon: `fuel-icon`,
+  },
+];

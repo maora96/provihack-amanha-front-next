@@ -23,7 +23,7 @@ import LinkContainer from "../components/LinkContainer";
 export default function Dashboard() {
   const [cookies, setCookies, removeCookies] = useCookies();
   const [activeSection, setActiveSection] = useState("summary");
-  const { user, setUser, registeredUsers, setRegisteredUsers } =
+  const { user, setUser, registeredUsers, setRegisteredUsers, setGoals } =
     useContext(UserContext);
 
   useEffect(() => {
@@ -80,7 +80,10 @@ export default function Dashboard() {
             size={32}
             onClick={() => {
               removeCookies(`user`);
+              removeCookies(`goals`);
               setUser({});
+              setGoals([]);
+
               Router.push("/");
             }}
           />

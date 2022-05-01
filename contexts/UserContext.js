@@ -7,6 +7,9 @@ export const UserContext = createContext({});
 const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState();
   const [registeredUsers, setRegisteredUsers] = useState([]);
+
+  const [goals, setGoals] = useState([]);
+
   const [cookies, setCookies] = useCookies();
   useEffect(() => {
     if (cookies?.user) {
@@ -23,11 +26,22 @@ const UserContextProvider = ({ children }) => {
       const alreadyRegisteredUsers = cookies?.registeredUsers;
       setRegisteredUsers(alreadyRegisteredUsers);
     }
+    if (cookies?.goals) {
+      const existingGoals = cookies?.goals;
+      setGoals(existingGoals);
+    }
   }, []);
 
   return (
     <UserContext.Provider
-      value={{ user, setUser, registeredUsers, setRegisteredUsers }}
+      value={{
+        user,
+        setUser,
+        registeredUsers,
+        setRegisteredUsers,
+        goals,
+        setGoals,
+      }}
     >
       {children}
     </UserContext.Provider>
